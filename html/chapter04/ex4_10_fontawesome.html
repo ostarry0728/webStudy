@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/de7b35df6f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             box-sizing: border-box;
@@ -12,7 +16,11 @@
             padding: 0;
         }
         body {
-            font-family: sans-serif;
+            font-family: sans-serif, "DynaPuff", system-ui;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
         }
         a {
             text-decoration: none;
@@ -30,6 +38,7 @@
             align-items: center;
         }
         div.nav_logo {
+            border-radius: 10px;
             font-size: 24px;
             font-weight: 700;
             display: flex;
@@ -53,6 +62,7 @@
             align-items: center;
         }
         ul.nav_menu a {
+            border-radius: 10px;
             padding: 8px 15px;
         }
         ul.nav_menu a:hover {
@@ -67,9 +77,11 @@
             align-items: center;
         }
         ul.nav_icons i.fa-github, i.fa-discord {
+            
             color: rgb(0, 79, 116);
         }
         ul.nav_icons a {
+            border-radius: 10px;
             font-size: 20px;
             padding: 8px 15px;
         }

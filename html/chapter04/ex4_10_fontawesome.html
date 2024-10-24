@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/de7b35df6f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: sans-serif, "DynaPuff", system-ui;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            font-style: normal;
+            font-variation-settings: "wdth" 100;
+        }
+        a {
+            text-decoration: none;
+        }
+        nav {
+            width: 80%;
+            margin: 0 auto;
+            padding: 8px;
+            background-color: azure;
+            border: 1px dotted black;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        div.nav_logo {
+            border-radius: 10px;
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            justify-content: baseline;
+            align-items: center;
+        }
+        div.nav_logo:hover {
+            background-color: aquamarine;
+        }
+        div.nav_logo i {
+            color: rgb(255, 153, 0);
+            font-size: 32px;
+            margin-right: 5px;
+        }
+        ul.nav_menu {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        ul.nav_menu a {
+            border-radius: 10px;
+            padding: 8px 15px;
+        }
+        ul.nav_menu a:hover {
+            background-color: aquamarine;
+        }
+        ul.nav_icons {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
+        ul.nav_icons i.fa-github, i.fa-discord {
+            
+            color: rgb(0, 79, 116);
+        }
+        ul.nav_icons a {
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 8px 15px;
+        }
+        ul.nav_icons a:hover {
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav_logo">
+            <a href=""><i class="fa-solid fa-person-snowboarding"></i></a>
+            <a href="$">WEB CODING</a>
+        </div>
+
+        <ul class="nav_menu">
+            <li><a href="#">메뉴1</a></li>
+            <li><a href="#">메뉴2</a></li>
+            <li><a href="#">메뉴3</a></li>
+            <li><a href="#">메뉴4</a></li>
+            <li><a href="#">메뉴5</a></li>
+        </ul>
+
+        <ul class="nav_icons">
+            <li><a href="#"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+        </ul>
+    </nav>
+</body>
+</html>

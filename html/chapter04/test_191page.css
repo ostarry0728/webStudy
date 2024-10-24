@@ -1,0 +1,12 @@
+header{
+    border: 1px solid black;
+    width: 165px;
+    height: 70px;
+    text-align: center;
+    background-color: black;
+    color: white;
+}
+main{
+    padding: 30px;
+    color: rgb(32, 33, 110);
+}

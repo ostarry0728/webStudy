@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIGN UP</title>
+    <style>
+        body{
+            border: 1px solid rgb(145, 238, 255);
+        }
+        header {
+            display: inline-block;
+            border: 1px solid rgb(145, 238, 255);
+            margin: 0 auto;
+            
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <caption><b>회원 기본 정보</b></caption>
+    </header>
+    <div id="info1">
+        <form action="#" method="post">
+            <label for="id"><b>아이디:</b></label>
+            <input type="text" name="id" id="id"> <i>4~12자의 영문 대소문자와 숫자로만 입력</i>
+            <br>
+            <label for="password"><b>비밀번호:</b></label>
+            <input type="text" name="password" id="password"> <i>4~12자의 영문 대소문자와 숫자로만 입력</i>
+            <br>
+            <label for="password_check"><b>비밀번호확인:</b></label>
+            <input type="text" name="password_check" id="password_check"> 
+            <br>
+            <label for="email"><b>메일주소:</b></label>
+            <input type="text" name="email" id="email"> <i>ex) sammy@gmail.com</i>
+            <br>
+            <label for="name"><b>이름:</b></label>
+            <input type="text" name="name" id="name">
+    </div>
+    <div id="info2">
+            <caption><b>개인 신상 정보</b></caption><br>
+            <label for="person_id"><b>주민등록번호:</b></label>
+            <input type="text" name="person_id" id="person_id">-<input type="text" name="person_id" id="person_id"><i>ex)123456-1234567</i>
+            <br>
+            <label for="birth"><b>생일:</b></label>
+             <input type="text" name="birth" id="birth">년
+            <select name="month" id="month">
+                <option value="january">1</option>
+                <option value="february">2</option>
+                <option value="march">3</option>
+                <option value="april">4</option>
+                <option value="may">5</option>
+                <option value="june">6</option>
+                <option value="july">7</option>
+                <option value="august">8</option>
+                <option value="september">9</option>
+                <option value="ocober">10</option>
+                <option value="november">11</option>
+                <option value="december">12</option>
+            </select>월
+            <select name="date" id="date">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+                <option value="">7</option>
+                <option value="">8</option>
+                <option value="">9</option>
+                <option value="">10</option>
+                <option value="">11</option>
+                <option value="">12</option>
+                <option value="">13</option>
+                <option value="">14</option>
+                <option value="">15</option>
+                <option value="">16</option>
+                <option value="">17</option>
+                <option value="">18</option>
+                <option value="">19</option>
+                <option value="">20</option>
+                <option value="">21</option>
+                <option value="">22</option>
+                <option value="">23</option>
+                <option value="">24</option>
+                <option value="">25</option>
+                <option value="">26</option>
+                <option value="">27</option>
+                <option value="">28</option>
+                <option value="">29</option>
+                <option value="">30</option>
+                <option value="">31</option>
+            </select>일
+            <br>
+            <label for="like"><b>관심분야:</b></label>
+            <input type="checkbox" name="java" id="java">
+            <label for="java">Java</label>
+            <input type="checkbox" name="android" id="android">
+            <label for="java">Android</label>
+            <input type="checkbox" name="php" id="php">
+            <label for="java">PHP</label>
+            <input type="checkbox" name="ava_script" id="ava_script">
+            <label for="java">AVA Script</label>
+            <input type="checkbox" name="python" id="python">
+            <label for="java">Python</label> <i>*하나 이상 체크</i>
+            
+
+        </form>
+    </div>
+</body>
+</html>

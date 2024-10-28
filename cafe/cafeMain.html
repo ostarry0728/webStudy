@@ -67,7 +67,7 @@
         }
         .header-search input[type="text"] {
             width: 300px;
-            padding: 8px;
+            padding: 9px;
             border: 1px solid #ddd;
             border-radius: 20px;
             font-size: 16px;
@@ -81,6 +81,9 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
+        }
+        .header-search button:hover {
+            background-color: #00aa33;
         }
         /* 왼쪽 사이드바 */
         .sidebar {
@@ -130,6 +133,9 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
+        .post-item:hover {
+            background-color: rgb(194, 192, 192);
+        }
         .popular-posts h3, .neighbor-news h3 {
             font-size: 18px;
             margin-bottom: 15px;
@@ -158,6 +164,7 @@
             object-fit: cover;
             margin-bottom: 10px;
         }
+        
         .neighbor-news {
             padding: 20px;
         }
@@ -169,6 +176,10 @@
         }
         .neighbor-news-item a {
             text-decoration: none;
+            color: black;
+        }
+        .neighbor-news-item a:hover {
+            text-decoration: underline;
             color: black;
         }
         .neighbor-news-item:last-child {
@@ -193,15 +204,19 @@
             object-fit: cover;
             margin-left: auto;
         }
+        .neighbor-news-image:hover{
+            width: 61px;
+            height: 61px;
+        }
         /* 오른쪽 사이드 */
         .right-section {
-            width: 250px;
+            width: 320px;
             padding: 20px;
             margin-left: 20px;
         }
         /* 전체 컨테이너 스타일 */
         .login-container {
-            width: 100%;
+            width: 280px;
             background-color: #ffffff;
             padding: 15px;
             border-radius: 10px;
@@ -210,7 +225,7 @@
             margin-bottom: 20px;
         }
         .login-button {
-            width: 100%;
+            width: 250px;
             padding: 10px;
             font-size: 16px;
             font-weight: bold;
@@ -219,6 +234,9 @@
             border: none;
             border-radius: 8px;
             cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #00aa33;
         }
         .login-links {
             margin-top: 10px;
@@ -248,10 +266,14 @@
             text-decoration: none;
             color: black;
         }
+        .announcement a:hover {
+            text-decoration: underline;
+            color: black;
+        }
         /* 카페 지원 프로그램 */
         .extra-info {
             background-color: #ffffff;
-            padding: 15px;
+            padding: 25px;
             border-radius: 10px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
@@ -276,6 +298,10 @@
             text-decoration: none;
             color: black;
         }
+        .extra-info a:hover {
+            text-decoration: underline;
+            color: black;
+        }
         /* 광고 이미지 스타일 */
         .ad {
             background-color: #ffffff;
@@ -286,8 +312,11 @@
             text-align: center;
         }
         .ad img {
-            width: 100%;
+            width: 270px;
             border-radius: 8px;
+        }
+        .ad img:hover {
+            width: 273px;
         }
         /* 스마트봇 */
         .icon {
@@ -327,16 +356,22 @@
         .smartbot-text {
             display: flex;
             flex-direction: column;
-            font-size: 12px;
+            font-size: 5px;
             color: #666;
         }
         .smartbot-container a {
+            font-weight: bold;
+            font-size: 12px;
             text-decoration: none;
+            color: black;
+        }
+        .smartbot-container a:hover{
+            text-decoration: underline;
             color: black;
         }
 
         .smartbot-text .title {
-            font-size: 13px;
+            font-size: 9px;
             font-weight: bold;
             color: #333;
             margin-top: 5px;
@@ -346,7 +381,12 @@
             padding: 5px;
         }
         .cafe_info a {
+            font-size: 11px;
             text-decoration: none;
+            color: black;
+        }
+        .cafe_info a:hover {
+            text-decoration: underline;
             color: black;
         }
     </style>
@@ -382,11 +422,11 @@
                 <hr>
                 <br>
                 <div class="sidebar2">
-                    <a href="#"><li>주제별 카페</li></a>
-                    <a href="#"><li>지역별 카페</li></a>
-                    <a href="#"><li>인기 카페</li></a>
-                    <a href="#"><li>대표 카페</li></a>
-                    <a href="#"><li>카페 랭킹</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/themes/16?type=ar"><li>주제별 카페</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/areas"><li>지역별 카페</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/fans"><li>인기 카페</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/powers/popular"><li>대표 카페</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/rankings"><li>카페 랭킹</li></a>
                 </div>
             </div>
 
@@ -484,6 +524,7 @@
                 
                 <div class="extra-info">
                     <a href="https://cafe.naver.com/cafesupport/178508"><h3>카페 지원 프로그램 신청</h3></a>
+                    <hr>
                     <a href="https://cafe.naver.com/cafesupport"><h3>카페팀 공식카페 바로가기</h3></a>
                 </div>
                 <div class="ad">
@@ -500,12 +541,12 @@
                 <br>
                 <hr>
                 <div class="cafe_info">
-                    <a href="https://section.cafe.naver.com/ca-fe/home/terms">카페 이용약관</a><br>
-                    <a href="https://section.cafe.naver.com/ca-fe/home/operating-rules/1">카페 운영원칙</a><br>
-                    <a href="https://policy.naver.com/rules/privacy.html"><b>개인정보처리방침</b></a><br>
-                    <a href="https://policy.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a>
-                    <a href="https://right.naver.com/">권리보호센터</a><br>
-                    <a href="https://help.naver.com/service/5622/category/bookmark?lang=ko">카페 고객센터ⓒ</a><br>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/terms">카페 이용약관</a>．
+                    <a href="https://section.cafe.naver.com/ca-fe/home/operating-rules/1">카페 운영원칙</a>．
+                    <a href="https://policy.naver.com/rules/privacy.html"><b>개인정보처리방침</b></a>．
+                    <a href="https://policy.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a>．
+                    <a href="https://right.naver.com/">권리보호센터</a><br>．
+                    <a href="https://help.naver.com/service/5622/category/bookmark?lang=ko">카페 고객센터ⓒ</a>．
                     <a href="https://www.navercorp.com/">NAVER Corp.</a>
                 </div>
                 

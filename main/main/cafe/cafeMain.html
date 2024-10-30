@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 카페</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(255, 255, 255);
+            padding: 20px;
+        }
+        .container {
+            width: 1500px;
+            max-width: 1200px;
+        }
+        .box {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        
+        /* 헤더 */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 20px;
+            background-color: rgb(255, 255, 255);
+            border-bottom: 1px solid #ddd;
+        }
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .header-left a {
+            font-size: 20px;
+            font-weight: bold;
+            color: black; 
+            text-decoration: none; 
+        }
+        .header-login {
+            display: flex;
+            align-items: right;
+            justify-content: right;
+            padding: 15px 20px;
+            background-color: rgb(255, 255, 255);
+        }
+        .header-logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .header-search {
+            display: flex;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .header-search input[type="text"] {
+            width: 300px;
+            padding: 9px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            font-size: 16px;
+        }
+        .header-search button {
+            margin-left: 10px;
+            padding: 8px 12px;
+            font-size: 16px;
+            background-color: #00c73c;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .header-search button:hover {
+            background-color: #00aa33;
+        }
+        /* 왼쪽 사이드바 */
+        .sidebar {
+            width: 250px;
+            background-color: #ffffff;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+        }
+        .sidebar ul {
+            list-style: none;
+            text-decoration: none;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+            font-size: 16px;
+        }
+        .sidebar a {
+            color: black; 
+            text-decoration: none; 
+            font-weight: normal;
+        }
+        .sidebar li:hover {
+            background-color: #e0f8eb;
+            border-radius: 10px; 
+            color: #009f47;
+            font-weight: bold;
+        }
+        .sidebar2 li{
+            list-style: none;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 12px
+        }
+        /* 메인 */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .popular-posts, .neighbor-news {
+            background-color: rgb(255, 255, 255);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .post-item:hover {
+            background-color: rgb(194, 192, 192);
+        }
+        .popular-posts h3, .neighbor-news h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .post-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .post-list a {
+            text-decoration: none;
+            color: black;
+        }
+        .post-item {
+            width: calc(33% - 10px);
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
+            word-break: break-word;
+        }
+        .post-item img {
+            width: 100%;
+            height: 100px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+        
+        .neighbor-news {
+            padding: 20px;
+        }
+        .neighbor-news-item {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+        }
+        .neighbor-news-item a {
+            text-decoration: none;
+            color: black;
+        }
+        .neighbor-news-item a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+        .neighbor-news-item:last-child {
+            border-bottom: none;
+        }
+        .neighbor-news-text {
+            flex-grow: 1;
+        }
+        .neighbor-news-text h4 {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        .neighbor-news-text p {
+            font-size: 90%;
+            color: #808080e0;
+        }
+        .neighbor-news-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-left: auto;
+        }
+        .neighbor-news-image:hover{
+            width: 61px;
+            height: 61px;
+        }
+        /* 오른쪽 사이드 */
+        .right-section {
+            width: 320px;
+            padding: 20px;
+            margin-left: 20px;
+        }
+        /* 전체 컨테이너 스타일 */
+        .login-container {
+            width: 280px;
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .login-button {
+            width: 250px;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #ffffff;
+            background-color: #00c73c;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .login-button:hover {
+            background-color: #00aa33;
+        }
+        .login-links {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #888;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .login-links a {
+            color: #888;
+            text-decoration: none;
+        }
+        .login-links a:hover {
+            text-decoration: underline;
+            color: #333;
+        }
+        /* 공지사항 */
+        .announcement {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .announcement a {
+            text-decoration: none;
+            color: black;
+        }
+        .announcement a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+        /* 카페 지원 프로그램 */
+        .extra-info {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+            text-decoration: none;
+        }
+        .extra-info {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            text-align: center;
+        }
+        .extra-info a {
+            text-decoration: none;
+            color: black;
+        }
+        .extra-info a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+        /* 광고 이미지 스타일 */
+        .ad {
+            background-color: #ffffff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .ad img {
+            width: 270px;
+            border-radius: 8px;
+        }
+        .ad img:hover {
+            width: 273px;
+        }
+        /* 스마트봇 */
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-block;
+            background-color: #00c73c;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        .smartbot-container {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            background-color: #f5f7f8;
+            border-radius: 12px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        /* 아이콘 스타일 */
+        .smartbot-icon {
+            background-color: #00c73c;
+            color: white;
+            font-size: 24px;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+        }
+
+        /* 텍스트 섹션 스타일 */
+        .smartbot-text {
+            display: flex;
+            flex-direction: column;
+            font-size: 5px;
+            color: #666;
+        }
+        .smartbot-container a {
+            font-weight: bold;
+            font-size: 12px;
+            text-decoration: none;
+            color: black;
+        }
+        .smartbot-container a:hover{
+            text-decoration: underline;
+            color: black;
+        }
+
+        .smartbot-text .title {
+            font-size: 9px;
+            font-weight: bold;
+            color: #333;
+            margin-top: 5px;
+        }
+        /* 카페 약관 */
+        .cafe_info {
+            padding: 5px;
+        }
+        .cafe_info a {
+            font-size: 11px;
+            text-decoration: none;
+            color: black;
+        }
+        .cafe_info a:hover {
+            text-decoration: underline;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 헤더 -->
+        <header class="header">
+            <div class="header-left">
+                <a href="#" target="_blank">NAVER</a>
+                <a href="#" target="_blank">카페</a>
+                <div class="header-search">
+                    <input type="text" placeholder="원하는 카페, 글을 찾아보세요">
+                    <button>검색</button>
+                </div>
+            </div>
+            <div class="header-login">
+                <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/"><button>로그인</button></a>
+            </div>
+        </header>
+
+        <div style="display: flex;">
+            <!-- 왼쪽 사이드 -->
+            <div class="sidebar">
+                <ul>
+                    <a href="#"><li>🏠  카페홈</li></a>
+                    <a href="https://cafe.naver.com/ca-fe/home/town/talks"><li>✔️  이웃</li></a>
+                    <a href="#"><li>📝  구독</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/cafe-hots"><li>🔥  인기글</li></a>
+                    <a href="#"><li>🔔  내 소식</li></a>
+                    <a href="#"><li>💬  채팅</li></a>
+                </ul>
+                <hr>
+                <br>
+                <div class="sidebar2">
+                    <a href="https://section.cafe.naver.com/ca-fe/home/themes/16?type=ar"><li>주제별 카페</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/areas"><li>지역별 카페</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/fans"><li>인기 카페</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/powers/popular"><li>대표 카페</li></a>
+                    <a href="https://section.cafe.naver.com/ca-fe/home/rankings"><li>카페 랭킹</li></a>
+                </div>
+            </div>
+
+            <!-- 메인 -->
+            <main class="main-content">
+                <div class="section-title">카페홈</div>
+
+                <div class="popular-posts">
+                    <h3>🔥 인기글</h3> 
+                    <div class="post-list">
+                        <div class="post-item">
+                            <a href="https://cafe.naver.com/dieselmania/44807501"><img src="./media/FT아일랜드.jpg" alt="포스트 이미지"></a>
+                            <a href="https://cafe.naver.com/dieselmania/44807501"><b>FT아일랜드 최민환 근황.JPG</b></a>
+                        </div>
+                        <div class="post-item">
+                            <a href="https://cafe.naver.com/as6060/1927898"><img src="./media/맨유.jpg" alt="포스트 이미지"></a>
+                            <a href="https://cafe.naver.com/as6060/1927898"><b>그립다 그리워 07-08 맨유</b></a>
+                        </div>
+                        <div class="post-item">
+                            <a href="https://cafe.naver.com/smartbargain/1759879"><img src="./media/뷰러.jpg" alt="포스트 이미지"></a>
+                            <a href="https://cafe.naver.com/smartbargain/1759879"><b>뷰러를 잘 골라 보아요😆슈에무라 뷰러도 써보세요😘</b></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="neighbor-news">
+                    <div class="neighbor-news-item">
+                        <div class="neighbor-news-text">
+                            <a href="https://cafe.naver.com/campingfirst/3029429"><h4>솔캠 그리고 풍경 사진</h4></a>
+                            <p>캠퍼스페스트(소프트캠핑) 💬 11 🧡 28</p>
+                        </div>
+                        <a href="https://cafe.naver.com/campingfirst/3029429"><img src="./media/솔캠.jpg" alt="솔캠 사진" class="neighbor-news-image"></a>
+                    </div>
+                    <p><hr></p> 
+                    <div class="neighbor-news-item">
+                        <div class="neighbor-news-text">
+                            <a href="https://cafe.naver.com/bricknara/1413821"><h4>10298 vespa125</h4></a>
+                            <p>브릭나라[BrickNara] 레고 Lego 💬 2 🧡 26</p>
+                        </div>
+                        <a href="https://cafe.naver.com/campingfirst/3029429"><img src="./media/vespa.jpg" alt="vespa 사진" class="neighbor-news-image"></a>
+                    </div>
+                    <p><hr></p> 
+                    <div class="neighbor-news-item">
+                        <div class="neighbor-news-text">
+                            <a href="https://cafe.naver.com/andyhug/2598382"><h4>토푸리아 할로웨이 같은 체급 맞나요</h4></a>
+                            <p>[앤디훅 이종격투기]UFC,헬스,종합격투기,주짓수,MMA,로드FC 💬 3 🧡 21</p>
+                        </div>
+                        <a href="https://cafe.naver.com/campingfirst/3029429"><img src="./media/토푸리아.jpg" alt="토푸리아 사진" class="neighbor-news-image"></a>
+                    </div>
+                    <p><hr></p> 
+                    <div class="neighbor-news-item">
+                        <div class="neighbor-news-text">
+                            <a href="https://cafe.naver.com/coredenim/1709202"><h4>노랑색이 잘 어울렸었네요.. 🌼</h4></a>
+                            <p>브랜디드 [도메스틱, 디자이너, 자체제작 브랜드 패션 카페] 💬 2 🧡 25</p>
+                        </div>
+                        <a href="https://cafe.naver.com/coredenim/1709202"><img src="./media/집.png" alt="집 사진" class="neighbor-news-image"></a>
+                    </div>
+                    <p><hr></p> 
+                    <div class="neighbor-news-item">
+                        <div class="neighbor-news-text">
+                            <a href="https://cafe.naver.com/teamssogari/160805"><h4>라인텐션 없이 프리폴링으로 2시간동안 16수</h4></a>
+                            <p>팀쏘가리 💬 8 🧡 36</p>
+                        </div>
+                        <a href="https://cafe.naver.com/teamssogari/160805"><img src="./media/라인텐션.jpg" alt="라인텐션 사진" class="neighbor-news-image"></a>
+                    </div>
+                    <p><hr></p> 
+                </div>
+            </main>
+
+                <!-- 오른쪽 사이드 -->
+            <aside class="right-section">
+                <!-- 로그인 부분 -->
+                <div class="login-container">
+                    <!-- 로그인 버튼 -->
+                    <a href="https://nid.naver.com/nidlogin.login?mode=form&url=https://www.naver.com/"><button class="login-button">NAVER 로그인</button></a>
+
+                    <!-- 하단 링크 -->
+                    <div class="login-links">
+                        <a href="https://nid.naver.com/user2/help/idInquiry?lang=ko_KR">아이디 찾기</a>
+                        <span>|</span>
+                        <a href="https://nid.naver.com/user2/help/pwInquiry?lang=ko_KR">비밀번호 찾기</a>
+                        <span>|</span>
+                        <a href="https://nid.naver.com/user2/join/agree?lang=ko_KR&realname=">회원가입</a>
+                    </div>
+                </div>
+
+                <div class="announcement">
+                    <a href="https://notice.naver.com/notices/cafe?page=1&pageSize=10&newNoticeHour=168&t=l"><h3>공지사항</h3></a>
+                    <ul>
+                        <a href="https://notice.naver.com/notices/cafe/11558?page=1&pageSize=10&newNoticeHour=168&t=d"><p>공정거래위원회 법조 조항에 따른 사안...</p></a>
+                        <a href="https://notice.naver.com/notices/cafe/11472?page=1&pageSize=10&newNoticeHour=168&t=d"><p>[안내] 해외직구 관세법 위반 주의...</p></a>
+                        <a href="https://notice.naver.com/notices/cafe/17520?page=1&pageSize=10&newNoticeHour=168&t=d"><p>[안내] 멤버 구독 허용 옵션 및 나를 구독 중인 멤버...</p></a>
+                    </ul>
+                </div>
+                
+                <div class="extra-info">
+                    <a href="https://cafe.naver.com/cafesupport/178508"><h3>카페 지원 프로그램 신청</h3></a>
+                    <hr>
+                    <a href="https://cafe.naver.com/cafesupport"><h3>카페팀 공식카페 바로가기</h3></a>
+                </div>
+                <div class="ad">
+                    <a href="https://www.emons.co.kr/pr/event_view.php?num=138562&utm_source=naver_banner&utm_medium=caf%C3%A9&utm_campaign=emons_launching_1025&utm_content=caf%C3%A9_homebanner">
+                        <img src="./media/Emons.jpg" alt=""></a>
+                </div>
+                <div class="smartbot-container">
+                    <div class="smartbot-icon">🤖</div>
+                    <div class="smart-bot">
+                        <span><a href="https://talk.naver.com/ct/w4nd8o?resizeTo=1920,1080">카페 서비스에 궁금한 점이 있을 때</a></span>
+                        <span class="smartbot-link"><a href="https://talk.naver.com/ct/w4nd8o?resizeTo=1920,1080">카페 스마트봇</a></span>
+                    </div>
+                </div>
+                <br>
+                <hr>
+                <div class="cafe_info">
+                    <a href="https://section.cafe.naver.com/ca-fe/home/terms">카페 이용약관</a>．
+                    <a href="https://section.cafe.naver.com/ca-fe/home/operating-rules/1">카페 운영원칙</a>．
+                    <a href="https://policy.naver.com/rules/privacy.html"><b>개인정보처리방침</b></a>．
+                    <a href="https://policy.naver.com/rules/disclaimer.html">책임의 한계와 법적고지</a>．
+                    <a href="https://right.naver.com/">권리보호센터</a><br>．
+                    <a href="https://help.naver.com/service/5622/category/bookmark?lang=ko">카페 고객센터ⓒ</a>．
+                    <a href="https://www.navercorp.com/">NAVER Corp.</a>
+                </div>
+                
+                
+            </aside>
+        </div>
+    </div>
+</body>
+</html>

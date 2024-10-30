@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Poor+Story&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/abb02b8c73.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            font-family: 'Nanum Gothic', sans-serif;
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+
+        /* 헤더 시작 */
+        header { 
+            width: 100%;
+            /* border: 1px solid black; */
+            height:300px;  
+        }
+        /* 1. 헤더 가장 위 초록 부분 */
+        #header-top { 
+            display: flex;
+            padding-left: 180px;
+            /* padding-right: 200px; */
+            /* border: 1px solid black; */
+            width: 100%;
+            height: 60px;
+            background-color: rgb(104, 194, 107);
+            margin-right: 10px;
+        }
+        /* 1-1. 헤더 가장 위 로고 */
+        #header-top-logo { 
+            margin-right: 10px;
+            margin: 15px 10px 15px 0;
+    
+        }
+        /*  1-2. 헤더 가장 위 검색창 영역 */
+        #header-top-search {
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid black; */
+            background-color: white;
+            margin: 10px 0 10px;
+        }
+        /* 1-2-1. 헤더 가장 위 검색창 영역 '글' */
+        #search-box-text {
+            margin-left: 8px;
+            padding-left: 2px;
+            font-size: 0.9em;
+            color: rgb(104, 194, 107);
+        }
+        /* 1-2-2. 헤더 가장 위 검색창 영역 가운데 텍스트 공간 */
+        #search-box-middle {
+            width: 195px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #search-textarea { 
+            resize: none;
+            border: none;
+            margin-top: 6px;
+            font-size: 0.9em;
+            text-align: center;
+            align-items: center;
+        }
+        /* 1-2-3. 헤더 가장 위 검색창 영역 오른쪽 돋보기 아이콘 */
+        #search-box-right {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* border: 1px solid black; */
+            background-color: rgb(47, 173, 47); /* 버튼 배경색 */
+        }
+        #search-box-right a {
+            color: white;
+        }
+        /* 1-3. 헤더 가장 위 검색창 영역 옆 버튼 */
+         #search-button {
+            width: auto;
+            padding-left: 5px;
+            padding-right: 5px;
+            margin-left: 5px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(47, 173, 47);
+            font-size: small;
+        }
+        #search-button a {
+            color: white;
+        }
+        /* 1-4. 헤더 가장 위 로그인과 메뉴 아이콘 */
+        #header-top-user {
+            display: flex;
+            margin-left: 420px;
+        }
+        #user {
+            border: 0.1px solid rgba(149, 149, 149, 0.456);
+            height: 30px;
+            margin-top: 15px;
+            padding: 3px 9px 3px 9px;
+            font-size: small;
+            color: white;
+            line-height: 20px;
+        }
+        #user a {
+            color: white;
+        }
+        #menu-icon {
+            border: 0.1px solid rgba(149, 149, 149, 0.456);
+            margin-left: 20px;
+        }
+
+        /* 2. 헤더 두번째 메뉴 부분 */ 
+        #header-nav {
+            display: flex;
+            padding-left: 180px;
+            height: 30px;
+            margin-top: 10px;
+            font-size: small;
+            /* border-bottom: 0.1px solid #828282; */
+        }
+        #header-nav-left-left-1 {
+            padding-bottom: 11px;
+            border-bottom: 3px solid rgb(104, 194, 107);
+            color: rgb(0, 156, 0);
+            margin-right: 22px;
+        }
+        #header-nav-left-left-2 {
+            margin-right: 22px;
+        }
+        #header-nav-left-left-2:hover, 
+        #header-nav-left-right-1:hover,
+        #header-nav-left-right-2:hover,
+        #header-nav-left-right-3:hover {
+            padding-bottom: 11px;
+            border-bottom: 3px solid rgb(104, 194, 107);
+            color: rgb(0, 156, 0);
+        }
+        #header-nav-left-right-1 {
+            margin-left: 25px;
+        }
+        #header-nav-left-right-2, #header-nav-left-right-3 {
+            margin-left: 19px;
+        }
+        #header-nav-right {
+            margin-left: 350px;
+            font-size: 0.9em;
+            letter-spacing: 0.005em;
+        }
+        #header-nav-right-left {
+            border: 0.1px solid #bfbfbf;
+            padding: 2px 6px 2px 6px;
+            background-color:rgb(104, 194, 107);
+            color: white;
+        }
+        #header-nav-right-right {
+            border: 0.1px solid #bfbfbf;
+            padding: 2px 8px 2px 8px;
+        }
+
+        /* 3. 헤더 마지막 메인 부분 */
+        #header-main {
+            background-color: #eee;
+            height: 315px;
+        }
+        #header-main-header {
+            padding-left: 180px;
+            padding-top: 19px;
+            display: flex;
+        }
+        #header-main-header-1 {
+            color: rgb(224, 78, 78);
+        }
+        #header-main-header-middle {
+            margin-left: 480px;
+            font-size: small;
+        }
+        #header-main-header-middle-1 {
+            border: 0.1px solid #bfbfbf;
+            padding: 1px 6px 1px 6px;
+            color: white;
+            background-color: #6a6a6a;
+        }
+        #header-main-header-middle-2,
+        #header-main-header-middle-3,
+        #header-main-header-middle-4,
+        #header-main-header-middle-5 {
+            border: 0.1px solid #bfbfbf;
+            padding: 1px 6px 1px 6px;
+            color: #6a6a6a;
+        }
+
+        #header-main-header-right {
+            font-size: small;
+        }
+        #header-main-header-right {
+            margin-left: 250px;
+        }
+        #header-main-header-right-1 {
+            border: 0.1px solid #bfbfbf;
+            padding: 1px 6px 1px 6px;
+            color: white;
+            background-color: #6a6a6a;
+        }
+        #header-main-header-right-2,
+        #header-main-header-right-3 {
+            border: 0.1px solid #bfbfbf;
+            padding: 1px 6px 1px 6px;
+            color: #6a6a6a;
+        }
+        #header-main-main {
+            display: flex;
+        }
+        #header-main-main {
+            margin-top: 10px;
+            margin-left: 170px;
+        }
+        #yogurt1, #yogurt2, #yogurt3{
+            margin: 4px;
+        }
+        #headermain {
+            margin: 10px;
+            margin-left: 41px;
+            margin-top: 2px;
+            height: 243px;
+        }
+        /* 헤더 종료 */
+
+        
+        /* 메인 시작 */
+        /* 1. 메인의 헤더*/
+        main {
+            float: left;
+            width: 760px;
+            margin-top: 110px;
+            margin-left: 180px;
+            /* border: 1px solid black; */
+        }
+        #main-header {
+            padding-top: 60px;
+            padding-bottom: 50px;
+            line-height: 30px;
+            text-align: center;
+        }
+        /* 2. 메인의 nav */
+        #main-nav {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-bottom: 10px;
+            font-size: small;
+        }
+        #main-nav1{
+            font-weight: bold;
+            color: rgb(0, 156, 0);
+        }
+        #main-nav1:hover { 
+            text-decoration: underline;
+        }
+        #main-nav2 {
+            margin-left: 15px;
+        }
+        #main-nav2:hover, #main-nav3:hover, #main-nav4:hover, #main-nav5:hover,
+        #main-nav6:hover, #main-nav7:hover, #main-nav8:hover {
+            text-decoration: underline;
+        }
+        #main-nav3, #main-nav5, #main-nav6, #main-nav7{
+            margin-left: 18px;
+        }
+        #main-nav4, #main-nav8 {
+            margin-left: 20px;
+        }
+        /* 3. 메인의 메인 */
+        #main1 {
+            height: 220px;
+            margin-top: 30px;
+            border-bottom: 0.5px solid #dddddd;
+        }
+        /* (메인의 메인의 글의 프로필) */
+        #main-left {
+            float: left;
+            margin-top: 20px;
+        }
+        #main-profile {
+            width: 150px;
+            /* border: 1px solid black; */
+            margin-bottom: 13px;
+            line-height: 17px;
+        }
+        #main-profile-img {
+            border-radius: 50%;
+            float: left;
+        }
+        #main-profile-name {
+            float: left;
+            font-size: 0.9em;
+            margin-left: 9px;
+            letter-spacing: -0.1em;
+        }
+        #main-profile-name:hover {
+            text-decoration: underline;
+        }
+        #main-profile-time {
+            float: none;
+            display: inline;
+            font-size: 0.8em;
+            color:#858585;
+            margin-left: 9px;
+            letter-spacing: -0.1em;
+        }
+        #main-title {
+            /* border: 1px solid black; */
+            font-size: 1em;
+            font-weight:bold;
+        }
+        #main-title:hover {
+            text-decoration: underline;
+        }
+        #main-detail {
+            margin-top: 10px;
+            font-size: 0.8em;
+            letter-spacing: -0.04em;
+        }
+        #main-detail:hover {
+            text-decoration: underline;
+        }
+        #main-reply {
+            font-size: 0.8em;
+            color:#858585;
+            margin-top: 12px;
+        }
+        #main-right {
+            float: left;
+            width: 160px;
+            height: 160px;
+            margin-left: 20px;   
+            margin-top: 5px;
+        }
+        /* 4. 메인의 푸터 */
+        #main-footer {
+            display: flex;
+            margin-left: 200px;
+            margin-top: 40px;
+        }
+        #main-footer1 {
+            border: 0.5px solid #dddddd;
+            color: rgb(0, 156, 0);
+            padding: 2.5px 8.5px 2.5px 8.5px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        #main-footer2, #main-footer3, #main-footer4, #main-footer5
+        , #main-footer6, #main-footer7, #main-footer8, #main-footer9, #main-footer10 {
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 0.9em;
+            margin-top: 4px;
+        }
+        #main-footer2:hover, #main-footer3:hover, #main-footer4:hover, #main-footer5:hover,
+        #main-footer6:hover, #main-footer7:hover, #main-footer8:hover, #main-footer9:hover,
+        #main-footer10:hover {
+            padding: 2.5px 8.5px 2.5px 8.5px;
+            margin-top: -0.5px;
+            /* margin-left: 10px; */
+            border: 0.5px solid #dddddd;
+        }
+        #main-footer11 {
+            margin-top: 4px;
+            font-size: 0.9em;
+        }
+        #main-footer11:hover {
+            text-decoration: underline;
+        }
+        /* 메인 종료 */
+
+
+
+        /* 사이드바 시작 */
+        aside {
+            float: left;
+            width: 280px;
+            height: 1110px;
+            margin-top: 130px;
+            margin-left: 45px;
+            border: 0.1px solid #dddddd;
+        }
+        #login {
+            height: 137px;
+            background-color: #ebebeb6f;
+        }
+        #login-top { 
+            padding-top: 15px;
+            font-size: 0.8em;
+            letter-spacing: -0.04em;
+            text-align: center;
+            color:#6a6a6a
+        }
+        #login-button {
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        #login-bottom {
+            letter-spacing: -0.005em;
+            margin-top: 10px;
+            text-align:center;
+            font-size: 0.75em;
+        }
+        #aside-sec1 {
+            padding-top: 20px;
+            padding-left: 15px;
+            height: 160px;
+            justify-content: space-between;
+            border-bottom: 0.1px solid #dddddd;
+        }
+        #aside-sec1-title {
+            padding-bottom: 30px;
+        }
+        #aside-sec1-title:hover {
+            text-decoration: underline;
+        }
+        #aside-sec1-text {
+            padding-top: 15px;
+            padding-bottom: 20px;
+        }
+        #aside-sec1-text1,
+        #aside-sec1-text2,
+        #aside-sec1-text3 {
+            font-size: 0.8em;
+            letter-spacing: -0.05em;
+            line-height: 2em;
+        }
+        #aside-sec1-text1:hover, #aside-sec1-text2:hover, #aside-sec1-text3:hover {
+            text-decoration: underline;
+        }
+        #aside-sec2 {
+            display: block;
+            font-size: 0.9em;
+            letter-spacing: -0.04em;
+            line-height: 1.5em;
+            padding-left: 20px;
+            padding-top: 25px;
+        }
+        #aside-sec2 p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.5em; 
+        }
+        #aside-sec2-1:hover, #aside-sec2-2:hover, #aside-sec2-3:hover, 
+        #aside-sec2-4:hover, #aside-sec2-5:hover, #aside-sec2-6:hover, #aside-sec2-7:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+        /* 푸터 시작 */
+        footer {
+            float: none;
+            margin-top: 3000px;
+            height: 200px;
+            /* border: 1px solid black; */
+            background-color: #ebebebb0;
+            padding-top: 40px;
+            padding-left: 350px;
+        }
+        #footer-top {
+            padding-right: 10px;
+            font-size: 0.8em;
+            letter-spacing: -0.01em;
+        }
+        #footer-bottom {
+            display: flex;
+            padding-left: 200px;
+            padding-top: 15px;
+            font-size: 0.7em;
+            align-items: center;
+        }
+        /* 푸터 종료 */
+    </style>
+</head>
+<body>
+    <!-- [1] 헤더 시작 -->
+    <header>
+        <!-- 1. 헤더 가장 위 초록 부분 -->
+        <div id="header-top">
+            <!-- 1-1. 헤더 가장 위 로고 -->
+            <div id="header-top-logo">
+                <a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0"><img src="./media/naverLogo2.png" width="90px"></a>
+            </div>
+            <!-- 1-2. 헤더 가장 위 검색창 영역 -->
+            <div id="header-top-search">
+                 <div id="search-box-left">
+                    <a href="#"id="search-box-text">글&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href="#"><i class="fa-solid fa-caret-down"></i></a>
+                    <span id="search-box-symbol">&nbsp;|</span>
+                 </div>
+                 <div id="search-box-middle">
+                    <textarea id="search-textarea" cols=23 rows=1></textarea>
+                 </div>
+                 <div id="search-box-right">
+                    <a href="#">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- 1-3. 헤더 가장 위 검색창 영역 옆 버튼 -->
+            <div id="search-button">
+                <a href="#">통합검색</a>
+             </div>
+            <!-- 1-4. 헤더 가장 위 로그인과 메뉴 아이콘 -->
+            <div id="header-top-user">
+                 <div id="user">
+                    <a href="https://nid.naver.com/nidlogin.login">로그인</a>
+                 </div>
+                 <div id="menu-icon">
+                    <a href="#"><img src="./media/category.png" height="58px"></a>
+                 </div>
+            </div>
+        </div>
+        <!-- 1. 헤더 위 가장 초록 부분 끝 -->
+
+
+
+        <!-- 2. 헤더 두번째 메뉴 부분 -->
+        <div id="header-nav">
+            <!-- 2-1. 헤더 두번째 메뉴 왼쪽-->
+            <!-- 2-1-1. 헤더 두번째 메뉴 가장 왼쪽 -->
+            <div id="header-nav-left-left">
+                <a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0" id="header-nav-left-left-1">블로그 홈</a>
+                <a href="https://section.blog.naver.com/ThemePost.naver?directoryNo=0&activeDirectorySeq=0&currentPage=1" id="header-nav-left-left-2">주제별 보기</a>
+            </div>
+            <!-- 2-1-2. 헤더 두번째 메뉴 왼쪽 "|" 부분"-->
+            <span>|</span>
+            <!-- 2-1-3-->
+            <div id="header-nav-left-right">
+                <a href="https://section.blog.naver.com/ThisMonthDirectory.naver" id="header-nav-left-right-1">이달의 블로그</a>
+                <a href="https://section.blog.naver.com/OfficialBlog.naver?currentPage=1" id="header-nav-left-right-2">공식블로그</a>
+                <a href="https://section.blog.naver.com/HotTopicChallenge.naver?currentPage=1" id="header-nav-left-right-3">챌린지 프로그램</a>
+            </div>
+            <!-- 2-2. 헤더 두번째 메뉴 오른쪽 -->
+            <div>
+                <div id="header-nav-right">
+                    <a href="https://seller.blog.naver.com/market/joinGuide" id="header-nav-right-left">블로그 마켓 가입</a>
+                    <a href="https://blog.naver.com/blogpeople" id="header-nav-right-right">블로그팀 공식블로그</a>
+                </div>
+            </div>
+        </div>
+        <!-- 2. 헤더 두번째 메뉴 부분 끝 -->
+
+
+
+        <!-- 3. 헤더 마지막 메인 부분 -->
+        <div id="header-main">
+            <!-- 3-1. 헤더 마지막 메인 부분의 헤더 -->
+            <div id="header-main-header">
+                <!-- 3-1. -->
+                <div id="header-main-header-left">
+                    <a href="#" id="header-main-header-1"><strong>핫토픽</strong></a>
+                    <span>></span>
+                    <a href="#">그릭 요거트</a>
+                </div>
+                <div id="header-main-header-middle">
+                    <a href="#" id="header-main-header-middle-1">1</a>
+                    <a href="#" id="header-main-header-middle-2">2</a>
+                    <a href="#" id="header-main-header-middle-3">3</a>
+                    <a href="#" id="header-main-header-middle-4">4</a>
+                    <a href="#" id="header-main-header-middle-5">5</a>
+                </div>
+                <div id="header-main-header-right">
+                    <a href="#" id="header-main-header-right-1">1</a>
+                    <a href="#" id="header-main-header-right-2">2</a>
+                    <a href="#" id="header-main-header-right-3">3</a>
+                </div>
+            </div>
+            <!-- 3-2. 헤더 마지막 메인 부분의 메인 -->
+            <div id="header-main-main">
+                <a href="https://blog.naver.com/jinjin1984/223619097441"><img src="./media/yogurt1.png" id="yogurt1" width="250px"></a>
+                <a href="https://blog.naver.com/moonyoning/223626747627"><img src="./media/yogurt2.png" id="yogurt2" width="250px"></a>
+                <a href="https://blog.naver.com/kkongz_room/223617285682"><img src="./media/yogurt3.png" id="yogurt3" width="250px"></a>
+                <a href="https://m.naver.com/homefeed/production-event/"><img src="./media/headermain.png" id="headermain" width="280px" height="250px"></a>
+            </div>
+        </div>
+        <!-- 3. 헤더 마지막 메인 부분 끝 -->
+    </header>
+    <!-- [1] 헤더 종료 -->
+
+
+
+
+    <!-- [2] 메인 시작-->
+    <main>
+        <!-- 1. 메인의 헤더 -->
+        <div id="main-header">
+            로그아웃 상태입니다. <br>
+            로그인하여 이웃새글을 확인해보세요.
+        </div>
+        <!-- 2. 메인의 nav-->
+        <div id="main-nav">
+            <a href="#"><span id="main-nav1">전체</span></a>
+            <a href="#"><span id="main-nav2">건강·의학</span></a>
+            <a href="#"><span id="main-nav3">교육·학문</span></a>
+            <a href="#"><span id="main-nav4">세계여행</span></a>
+            <a href="#"><span id="main-nav5">방송</span></a>
+            <a href="#"><span id="main-nav6">미술·디자인</span></a>
+            <a href="#"><span id="main-nav7">만화·애니</span></a>
+            <a href="#"><span id="main-nav8">스포츠</span></a>
+
+        </div>
+        <!-- 3. 메인의 메인-->
+        <div id="main-main">
+            <!-- 3-1. 메인의 메인의 1번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-1-1. 메인의 메인의 1번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/greedady">
+                            <img src="./media/profile1.jpg" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">인포머</span><br>
+                            <span  id="main-profile-time">19시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-1-2. 메인의 메인의 1번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/greedady/223634130459">로드나인 쿠폰과 신서버 및 무기 직업 순위 모바일MMORPG에서 중요한 이<br>유?!!</a></span>
+                    </div>
+                    <!-- 3-1-3. 메인의 메인의 1번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/greedady/223634130459">순위가 평가의 절대적인 기준은 아니지만 정식 서비스가 시작되고 어느덧 100일 기념 로드나인 쿠폰이 공<br>
+                        개된 시점을 기준으로 되짚어보면 큰 반향을 일으킬만한 변화는 없는 것 같습니다. 캐릭터가 생성될 때 클<br>
+                        래스를 정하지 않고 플레이 과정에서 직업을 완성하는 시스템과 기존과 다른 BM을 앞세웠지만 결과적⋯</a></span>
+                    </div>
+                    <!-- 3-1-4. 메인의 메인의 1번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 28   댓글 10</span>
+                    </div>
+                </div>
+                <!-- 3-1-5. 메인의 메인의 1번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/greedady/223634130459"><img src="./media/img1.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-1. 메인의 메인의 1번째 글 끝-->
+
+            <!-- 3-2. 메인의 메인의 2번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-2-1. 메인의 메인의 2번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/mj_hudadak">
+                            <img src="./media/profile2.jpg" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">MJ의후다닥레시피</span><br>
+                            <span  id="main-profile-time">22시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-2-2. 메인의 메인의 2번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/mj_hudadak/223634202471">편스토랑 류수영 깻잎전 깻잎튀김 레시피 어남선생 깻잎요리 빠삭!</a></span>
+                    </div>
+                    <!-- 3-2-3. 메인의 메인의 2번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/mj_hudadak/223634202471">편스토랑 류수영 깻잎전 류수영깻잎전 류수영깻잎튀김 레시피 어남선생깻잎전 어남선생깻잎튀김 류수영<br>
+                        깻잎요리 2024년 10월 25일에 방영된 편스토랑 깻잎전 레시피 소개해 볼게요. 어남선생 레시피 이며, 깻<br>
+                        잎전 이라고 말하기엔 너무 빠삭해서 깻잎튀김 이라고 붙여야 맞는 것 같아요. 고물가 시대에 천 원으로 ⋯</a></span>
+                    </div>
+                    <!-- 3-2-4. 메인의 메인의 2번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 139   댓글 16</span>
+                    </div>
+                </div>
+                <!-- 3-2-5. 메인의 메인의 2번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/mj_hudadak/223634202471"><img src="./media/img2.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-2. 메인의 메인의 2번째 글 끝-->
+
+            <!-- 3-3. 메인의 메인의 3번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-3-1. 메인의 메인의 3번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/donghee5995">
+                            <img src="./media/profile3.jpg" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">동플릭스</span><br>
+                            <span  id="main-profile-time">11시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-3-2. 메인의 메인의 3번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/donghee5995/223634776855">이수현을 죽인 범인, 이토록 친밀한 배신자 5회 5화 줄거리 해석</a></span>
+                    </div>
+                    <!-- 3-3-3. 메인의 메인의 3번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/donghee5995/223634776855">이토록 친밀한 배신자 5회 5화 줄거리 이수현을 죽인 범인 이토록 친밀한 배신자 5회 5화 회차 정보 우<br>
+                        리 하빈이.. 남들처럼 평범하게 키울 거예요. 일 년 전 죽은 전처에게서 연락이 온다. 태수는 지수의 충격적<br>
+                        인 비밀을 알게 되는데...딸에 대해 알면 알수록 더욱더 미궁으로 빠져들어가는 태수는 더 이상 이 일을 ⋯</a></span>
+                    </div>
+                    <!-- 3-3-4. 메인의 메인의 3번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 11   댓글 1</span>
+                    </div>
+                </div>
+                <!-- 3-3-5. 메인의 메인의 3번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/donghee5995/223634776855"><img src="./media/img3.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-3. 메인의 메인의 3번째 글 끝-->
+
+            <!-- 3-4. 메인의 메인의 4번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-4-1. 메인의 메인의 4번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/baby0817">
+                            <img src="./media/profile4.jpg" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">꼬마츄츄</span><br>
+                            <span  id="main-profile-time">23시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-4-2. 메인의 메인의 4번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/baby0817/223634134285">차승원 어묵 김치찌개 레시피 참치 김치찌개 맛있게 끓이는법</a></span>
+                    </div>
+                    <!-- 3-4-3. 메인의 메인의 4번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/baby0817/223634134285">차승원 김치찌개 참치 김치찌개 맛있게 끓이는법 어묵 김치찌개 레시피 어릴 때 생각이 나던 차승원 어묵<br>
+                        김치찌개 레시피! 간단하게 계량을 해서 알려드리겠습니다. 어제는 삼시새끼 라이트 추자도의 마지막 날<br>
+                        까지 방송이 되었는데 역시나 맛있어 보이는 장면들과 배에서 고기를 잡으면서 재미있는 상황들이 일주⋯</a></span>
+                    </div>
+                    <!-- 3-4-4. 메인의 메인의 4번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 227   댓글 17</span>
+                    </div>
+                </div>
+                <!-- 3-3-5. 메인의 메인의 3번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/baby0817/223634134285"><img src="./media/img4.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-4. 메인의 메인의 4번째 글 끝-->
+
+            <!-- 3-5. 메인의 메인의 5번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-5-1. 메인의 메인의 5번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/hyunjee1110">
+                            <img src="./media/profile5.png" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">백현지</span><br>
+                            <span  id="main-profile-time">17시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-5-2. 메인의 메인의 5번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/hyunjee1110/223634471834">베놈 라스트 댄스 후기 평점 쿠키 결말 스포</a></span>
+                    </div>
+                    <!-- 3-5-3. 메인의 메인의 5번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/hyunjee1110/223634471834">베놈 라스트 댄스 후기가 궁금하셨다면 여기요! 국내외 평점 및 쿠키까지 자세하게 정리해봤습니다. 결말<br>
+                        은 스포를 원하지 않는 분을 배려해 맨 마지막 단락에 따로 적어놨어요 🙂 베놈 라스트 댄스 평점은? 북미<br>
+                        에서 10월 25일에 개봉했기 때문에 이제는 해외 평점도 어느정도 객관성을 띈 시점이에요. 먼저 로튼토 ⋯</a></span>
+                    </div>
+                    <!-- 3-5-4. 메인의 메인의 5번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 195   댓글 8</span>
+                    </div>
+                </div>
+                <!-- 3-5-5. 메인의 메인의 5번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/hyunjee1110/223634471834"><img src="./media/img5.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-3. 메인의 메인의 3번째 글 끝-->
+
+            <!-- 3-6. 메인의 메인의 6번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-6-1. 메인의 메인의 6번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/rtldmsql11">
+                            <img src="./media/profile6.png" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">FANCY</span><br>
+                            <span  id="main-profile-time">11시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-6-2. 메인의 메인의 6번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/rtldmsql11/223634734693">웨딩 포토부스 가격? 시야 아이돌 프레임st 셀프 제작 후기! #생일카페 #브라이<br>덜샤워 #돌잔치</a></span>
+                    </div>
+                    <!-- 3-6-3. 메인의 메인의 6번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/rtldmsql11/223634734693">안녕하세요! 팬시에요! 요즘은 친구들이랑 만나면 무조건 사진맛집 가서 사진 남겨줘야 하고 팝업스토어<br>
+                        나 행사장에서도 빠지면 섭섭한 거 알죠?? 요즘엔 아이돌이나 배우, 캐릭터랑도 함께 찍을 수 있는 한정판<br>
+                        프레임도 나오던데 문득,, 이거 내 결혼식에도 하면 넘 좋겠다,, 싶은 거예요,, (굿 아이디어자나,,?) 나랑⋯</a></span>
+                    </div>
+                    <!-- 3-6-4. 메인의 메인의 6번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 10   댓글 1</span>
+                    </div>
+                </div>
+                <!-- 3-6-5. 메인의 메인의 6번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/rtldmsql11/223634734693"><img src="./media/img6.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-6. 메인의 메인의 6번째 글 끝-->
+
+            <!-- 3-7. 메인의 메인의 7번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-7-1. 메인의 메인의 7번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/kaminari2002">
+                            <img src="./media/profile7.jpg" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">무비 JY</span><br>
+                            <span  id="main-profile-time">2024. 10. 26.</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-7-2. 메인의 메인의 7번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/kaminari2002/223633955720">넷플릭스 신작 <지옥 시즌2 Hellbound2> 문근영의 연기가 미쳤다. 시즌1보다<br>더 압도적인 또 다른 느낌. (1-3화 후기)</a></span>
+                    </div>
+                    <!-- 3-7-3. 메인의 메인의 7번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/kaminari2002/223633955720">넷플릭스 오리지널 드라마 <지옥 시즌2 Hellbound 2>가 어제 공개되었습니다. <부산행> 연상호 감독의<br>
+                        연출작으로, <지옥 시즌1>이 나온지 벌써 3년이나 되었더군요. 그 사이 주연배우였던 유아인이 하차하고,<br>
+                        그 자리를 배우 김성철이 대신하였는데요. 총 6부작으로 이번엔 어떤 얘기를 펼쳐냈을지 무척 궁금했습⋯</a></span>
+                    </div>
+                    <!-- 3-7-4. 메인의 메인의 7번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 40</span>
+                    </div>
+                </div>
+                <!-- 3-7-5. 메인의 메인의 7번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/kaminari2002/223633955720"><img src="./media/img7.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-3. 메인의 메인의 3번째 글 끝-->
+
+            <!-- 3-8. 메인의 메인의 8번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-8-1. 메인의 메인의 8번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/dangbee07">
+                            <img src="./media/profile8.jpg" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">록이</span><br>
+                            <span  id="main-profile-time">22시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-8-2. 메인의 메인의 8번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/dangbee07/223634214102">용인 둔전 맛집 수제버거가 맛있는 왓더버거 둔전점</a></span>
+                    </div>
+                    <!-- 3-8-3. 메인의 메인의 8번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/dangbee07/223634214102">안녕하세요 ㅎㅎ 오늘은 용인 둔전 맛집 왓더버거 둔전점 후기를 들고 왔습니다~~ 햄버거를 그리 좋아하<br>
+                        진 않지만 수제버거는 한 번씩 생각날 때가 있어 가끔 먹곤 하는데 집 주위에 왓더버거가 있다고 해서 퇴근<br>
+                        후에 친구랑 가봤어요 용인 둔전 맛집 왓더버거 둔전점은 용인 둔전 힐스테이트 아파트 안에 상가 전용⋯</a></span>
+                    </div>
+                    <!-- 3-8-4. 메인의 메인의 8번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 114   댓글 23</span>
+                    </div>
+                </div>
+                <!-- 3-8-5. 메인의 메인의 8번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/dangbee07/223634214102"><img src="./media/img8.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-8. 메인의 메인의 8번째 글 끝-->
+
+            <!-- 3-9. 메인의 메인의 9번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-9-1. 메인의 메인의 9번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/gamer__researcher">
+                            <img src="./media/profile9.png" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">게임하는 연구원</span><br>
+                            <span  id="main-profile-time">19시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-9-2. 메인의 메인의 9번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/gamer__researcher/223634370804">메이플랜드 메랜 1주년 이벤트 단풍잎, 황금단풍잎 퀘스트 가이드</a></span>
+                    </div>
+                    <!-- 3-9-3. 메인의 메인의 9번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/gamer__researcher/223634370804">메이플랜드 메랜 1주년 이벤트 단풍잎, 황금단풍잎 퀘스트 가이드 안녕하세요. 25년 차 게임 마스터 게임<br>
+                        하는 연구원입니다. 드디어 기다리고 기다리던, 메이플랜드 1주년 이벤트가 시작되었습니다! 이번 포스팅<br>
+                        에서는 메랜 1주년 기념으로 어떤 퀘스트가 있고, 어떻게 참여할 수 있는지 소개해드리고자 합니다. 이⋯</a></span>
+                    </div>
+                    <!-- 3-9-4. 메인의 메인의 9번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 5   댓글 0</span>
+                    </div>
+                </div>
+                <!-- 3-9-5. 메인의 메인의 9번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/gamer__researcher/223634370804"><img src="./media/img9.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-9. 메인의 메인의 9번째 글 끝-->
+
+            <!-- 3-10. 메인의 메인의 10번째 글-->
+            <div id="main1">
+                <div id="main-left">
+                    <!-- 3-10-1. 메인의 메인의 10번째 글의 프로필 -->
+                    <div id="main-profile">
+                        <a href="https://blog.naver.com/camoju">
+                            <img src="./media/profile10.jpg" width="32px" id="main-profile-img">
+                            <span  id="main-profile-name">MJ</span><br>
+                            <span  id="main-profile-time">21시간 전</span>
+                        </a>
+                    </div>
+            
+                    <!-- 3-10-2. 메인의 메인의 10번째 글의 제목-->
+                    <div id="main-title">
+                    <span><a href="https://blog.naver.com/camoju/223634239500">지옥2 시즌2 4화 5화 6화 결말 해석 등장인물, 정자 예언과 혜진 모성, 재현과 미<br>
+                        래, 진수 거울 정무수석 거짓교리, 악마의 장난 Hellbound 2024 넷플릭스</a></span>
+                    </div>
+                    <!-- 3-10-3. 메인의 메인의 10번째 글의 내용-->
+                    <div id="main-detail">
+                    <span><a href="https://blog.naver.com/camoju/223634239500">지옥2 시즌2 4화 5화 6화 Hellbound S02 E04 E05 E06 2024 개인평가 - 정자 예언과 혜진 모성, 재현<br>
+                        과 미래, 진수 거울 정무수석 거짓교리, 악마의 장난 혜진은 새진리회에 붙잡혀있는 정자를 빼내려 하는<br>
+                        데.. 1.지옥(정무수석/성집/진수=거짓)=욕망(절망), 산/거울=내면 정자를 빼내 자녀들 품으로 돌려보내⋯</a></span>
+                    </div>
+                    <!-- 3-10-4. 메인의 메인의 10번째 글의 댓글-->
+                    <div id="main-reply">
+                        <span>공감 18   댓글 8</span>
+                    </div>
+                </div>
+                <!-- 3-10-5. 메인의 메인의 10번째 글의 사진-->
+                <div id="main-right">
+                    <a href="https://blog.naver.com/camoju/223634239500"><img src="./media/img10.png" width="160px" id="main-img"></a>
+                </div>
+            </div> 
+            <!-- 3-10. 메인의 메인의 10번째 글 끝-->
+            </div>
+            <div id="main-footer">
+                <a href="#"><div id="main-footer1">1</div></a>
+                <a href="#"><div id="main-footer2">2</div></a>
+                <a href="#"><div id="main-footer3">3</div></a>
+                <a href="#"><div id="main-footer4">4</div></a>
+                <a href="#"><div id="main-footer5">5</div></a>
+                <a href="#"><div id="main-footer6">6</div></a>
+                <a href="#"><div id="main-footer7">7</div></a>
+                <a href="#"><div id="main-footer8">8</div></a>
+                <a href="#"><div id="main-footer9">9</div></a>
+                <a href="#"><div id="main-footer10">10</div></a>
+                <span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <a href="#"><div id="main-footer11">다음></div></a>
+            </div>
+        </div>
+    </main>
+    <!-- [2] 메인 종료-->
+
+
+
+
+    <!-- [3] 사이드바 시작-->
+    <aside>
+        <div id="login">
+            <div id="login-top">
+                네이버를 보다 편리하고 안전하게 이용하세요
+            </div>
+            <div id="login-button">
+                <a href="https://nid.naver.com/nidlogin.login?url=https%3A%2F%2Fsection.blog.naver.com%2FBlogHome.naver"><img src="./media/loginbutton.png" width="255px"></a>
+            </div>
+            <div id="login-bottom">
+                <a href="https://nid.naver.com/user2/help/idInquiry.nhn?menu=idinquiry">아이디 찾기&nbsp;&nbsp;</a>
+                <a href="https://nid.naver.com/user2/help/pwInquiry.nhn?menu=pwinquiry">비밀번호 찾기&nbsp;&nbsp;</a>
+                <a href="https://nid.naver.com/user2/join/agree?lang=ko_KR&realname=">&nbsp;&nbsp;&nbsp;&nbsp;<img src="./media/signup.png" width="13px">회원가입</a>
+            </div>
+        </div>
+        <div id="aside-img">
+            <a href="https://www.ybmallinall.com/?ref=open_2024&utm_campaign=open_2024&utm_source=naver&utm_medium=banner"><img src="./media/aside1.png" width="280px"></a>
+        </div>
+        <div id="aside-img2">
+            <a href="https://seller.blog.naver.com/market/joinGuide"><img src="./media/aside2.png" width="280px"></a>
+        </div>
+        <div id="aside-sec1">
+            <span id="aside-sec1-title"><strong><a href="https://section.blog.naver.com/Notice.naver">공지사항</a></strong></span>
+            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://section.blog.naver.com/Notice.naver">></a></span>
+            <p id="aside-sec1-text">
+                <span id="aside-sec1-text1"><a href="https://section.blog.naver.com/Notice.naver?docId=17545">[안내] 모바일 앱 에디터에서 음악 글감 첨부,⋯<br></a></span>
+                <span id="aside-sec1-text2"><a href="https://section.blog.naver.com/Notice.naver?docId=17438">[안내] 의약품 류 불법 온라인 유통 관련 유의⋯<br></a></span>
+                    <span id="aside-sec1-text3"><a href="https://section.blog.naver.com/Notice.naver?docId=17259">[사전 안내] 모먼트 에디터/뷰어가 종료됩니다.</a></span>
+            </p>   
+        </div>
+        <div id="aside-sec2">
+            <a href="https://nid.naver.com/nidlogin.login?mode=form&svctype=64&url=https://section.blog.naver.com/ReloadOpenerAndClose.nhn"><p id="aside-sec2-1"><img src="./media/sec2_1.png" width="30px" height="30px">&nbsp;블로그 앱 간편설치<br></p></a>
+            <a href="https://developers.naver.com/docs/share/navershare/"><p id="aside-sec2-2"><img src="./media/sec2_2.png" width="30px" height="30px">&nbsp;개발 가이드<br></p></a>
+            <a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0"><p id="aside-sec2-3"><img src="./media/sec2_3.png" width="30px" height="30px">&nbsp;블로그 글 권리보호<br></p></a>
+            <a href="https://nid.naver.com/nidlogin.login?svctype=64&url=https%3A%2F%2Ftalk.naver.com%2Fct%2Fw4nd8p%3FresizeTo%3D751%2C453"><p id="aside-sec2-4"><img src="./media/sec2_4.png" width="30px" height="30px">&nbsp;블로그 스마트봇<br></p></a>
+            <a href="https://help.naver.com/service/5593/category/bookmark?lang=ko"><p id="aside-sec2-5"><img src="./media/sec2_5.png" width="30px" height="30px">&nbsp;블로그 고객센터<br></p></a>
+            <a href="https://help.naver.com/reportCenter/home.help"><p id="aside-sec2-6"><img src="./media/sec2_6.png" width="30px" height="30px">&nbsp;신고센터<br></p></a>
+            <a href="https://happybean.naver.com/introduction/cong"><p id="aside-sec2-7"><img src="./media/sec2_7.png" width="30px" height="30px">&nbsp;해피빈 콩받기 안내</p></a>
+        </div>
+    </aside>
+    <!-- [3] 사이드바 종료-->
+
+
+
+    <!-- [4] 푸터 시작 -->
+    <footer>
+        <div id="footer-top">
+            <a href="https://policy.naver.com/rules/service.html"><span>이용약관&nbsp;</span></a>
+            <span>|</span>
+            <a href="https://blog.naver.com/post/blog_use.htm"><span>&nbsp;블로그 서비스 운영정책&nbsp;</span></a>
+            <span>|</span>
+            <a href="https://policy.naver.com/rules/privacy.html"><strong><span>&nbsp;개인정보처리방침&nbsp;</span></strong></a>
+            <span>|</span>
+            <a href="https://policy.naver.com/rules/disclaimer.html"><span>&nbsp;책임의 한계와 법적고지&nbsp;</span></a>
+            <span>|</span>
+            <a href="https://section.blog.naver.com/BlogHome.naver?directoryNo=0&currentPage=1&groupId=0"><span>&nbsp;글 권리 보호하기&nbsp;</span></a>
+            <span>|</span>
+            <a href="https://right.naver.com/"><span>&nbsp;게시중단요청서비스</span></a>
+        </div>
+        <div id="footer-bottom">
+            <a href="https://www.navercorp.com/"><img src="./media/navelogolast.png" width="80px" id="footer-last"></a>
+            Copyright © <strong>NAVER Corp.</strong> All Rights Reserved.
+        </div>
+    </footer>
+    <!-- [4] 푸터 종료 -->
+</body>
+</html>

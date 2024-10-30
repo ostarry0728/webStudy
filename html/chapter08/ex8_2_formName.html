@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="login.jsp" method="post" name="login">
+        <label for="id">사용자ID</label><br>
+        <input type="text" name="id" id="id"><span></span><br>
+        <label for="pwd">패스워드</label><br>
+        <input type="password" name="pwd" id="pwd"><span></span><br>
+        <button type="button">log in</button>
+    </form>
+
+    <script>
+        //이벤트를 설정할 객체를 찾는다
+       const btnObj = document.querySelector('[type="button"]');
+       //이벤트 설정
+       btnObj.addEventListener("click",()=>{
+            const id = document.login.id;
+            const pwd = document.querySelector("#pwd");
+            if(id.value.length < 8 || id.value.length > 14){
+                id.nextSibling.innerHTML = ' <b>8글자 미만, 14글자를 초과할 수 없습니다.</b>';
+                id.value = "";  
+                id.focus();
+                return;
+            }else{
+                id.nextSibling.innerHTML = ' ';
+            }
+            if(pwd.value.length < 8 || pwd.value.length > 14){
+                pwd.nextSibling.innerHTML = ' <b>8글자 미만, 12글자를 초과할 수 없습니다.</b>';
+                pwd.value = "";  
+                pwd.focus();
+                return;
+            }else{
+                pwd.nextSibling.innerHTML = ' ';
+            }
+            alert("입력 성공");
+       });
+    </script>
+</body>
+</html>

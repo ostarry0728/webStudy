@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid black;
+            width: 300px;
+        }
+    </style>
+    <script>
+        function onLoad(){
+            //객체찾기
+            const divObj = document.querySelector("div");
+            const btnObj = document.querySelector('[type="button"]');
+            //이벤트리스너 등록, 핸들러처리
+            btnObj.addEventListener("click", (e)=>{
+                //<a> node 생성
+                const aTag = document.createElement("a");
+                const brTag = document.createElement("br");
+                aTag.href = "https://daum.net";
+                aTag.target = "_blank";
+                aTag.textContent = "다음으로가기";
+                aTag.style.padding = "10px";
+                aTag.style.display = "inline-block";
+                aTag.style.border = "1px solid black";
+                aTag.style.backgroundColor = "yellow";
+                aTag.style.textDecoration = "none";
+                divObj.appendChild(aTag);
+                divObj.appendChild(brTag);
+            });
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+    <div>
+        <h2>사이트 추가하기</h2>
+        <hr>
+    </div>
+    <button type="button">노드추가하기</button>
+</body>
+</html>

@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원 가입</title>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="./sign_up.js"></script>
     <style>
         body {
             background-color: #f5f5f5;
         }
-        table {
+        .table {
             border-collapse: collapse;
             width: 600px;
             margin: 50px auto;
@@ -39,31 +41,31 @@
         }
     </style>
 </head>
-<body>
+<body onload="onLoad();">
 
-<table>
+<form class="table">
     <tr>
         <th colspan="2">회원 기본 정보</th>
     </tr>
     <tr>
         <td>아이디:</td>
-        <td><input type="text" placeholder="4~12자의 영문 대소문자와 숫자만 입력"></td>
+        <td id="id"><input type="text" placeholder="4~12자의 영문 대소문자와 숫자만 입력" required><span></span></td>
     </tr>
     <tr>
         <td>비밀번호:</td>
-        <td><input type="password" placeholder="4~12자의 영문 대소문자와 숫자만 입력"></td>
+        <td id="pwd"><input type="password" placeholder="4~12자의 영문 대소문자와 숫자만 입력" required><span></span></td>
     </tr>
     <tr>
         <td>비밀번호 확인:</td>
-        <td><input type="password" placeholder="4~12자의 영문 대소문자와 숫자만 입력"></td>
+        <td id="pwd1"><input type="password" placeholder="4~12자의 영문 대소문자와 숫자만 입력" required><span></span></td>
     </tr>
     <tr>
         <td>메일주소:</td>
-        <td><input type="text" placeholder="ex) sammy@gmail.com"></td>
+        <td id="email"><input type="text" placeholder="ex) sammy@gmail.com" required><span></span></td>
     </tr>
     <tr>
         <td>이름:</td>
-        <td><input type="text"></td>
+        <td><input type="text" required><span></span></td>
     </tr>
 
     <tr>
@@ -71,11 +73,11 @@
     </tr>
     <tr>
         <td>주민등록번호:</td>
-        <td><input type="text" placeholder="ex) 123456-1234567"></td>
+        <td id="rrnum"><input type="text" placeholder="ex) 123456-1234567" required><span></span></td>
     </tr>
 <tr>
         <td>생일:</td>
-        <td>
+        <td id="birth">
             <select>
                 <option>1월</option>
                 <option>2월</option>
@@ -133,7 +135,7 @@
             <input type="reset" value="다시 입력">
         </td>
     </tr>
-</table>
+</form>
 
 </body>
 </html>

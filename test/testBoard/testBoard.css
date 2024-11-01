@@ -122,6 +122,7 @@ body {
 .sidebar-info {
     font-size: 18px;
     background-color: #eeeeee;
+    padding: 12px;
 }
 .sidebar h2 {
     font-size: 22px;
@@ -154,14 +155,12 @@ body {
     margin: 30px auto;
     gap: 20px;
     align-items: stretch;
-    border: 1px solid black;
 }
 .content {
     height: 80px;
     flex-grow: 1;
     background-color: white;
     padding: 20px;
-    border: 1px solid black;
 }
 .content h2 {
     font-size: 22px;
@@ -179,3 +178,102 @@ body {
     text-decoration: none;
     
 }
+/* 게시판 */
+.board {
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.left-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.right-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#page, #category, .search_input, .search_button, .view-button {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.view-button, .search_button {
+    background-color: #717171;
+    color: #cfd6ce;
+    border: none;
+    cursor: pointer;
+}
+.view-button:hover, .search_button:hover {
+    background-color: #5c5b5b;
+}
+.search_input {
+    width: 200px;
+}
+.board-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+.left-footer {
+    display: flex;
+    gap: 5px;
+    margin: 0 auto;
+}
+.page-button , .arrow{
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.page-button.active {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+}
+.page-button:hover, .arrow:hover {
+    background-color: #717171;
+}
+.arrow[disabled] {
+    cursor: not-allowed;
+    background-color: #f0f0f0;
+}
+.write-button{
+    padding: 6px 8px;
+    font-size: 14px;
+    color: #cfd6ce;
+    background-color: #717171;
+    border-radius: 4px;
+    border: none;
+}
+
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI_PATTERN</title>
+    <script src="./UI_pattern.js"></script>
+    <style>
+        body {
+            background-color: #d3eaf2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form{
+            width: 600px;
+            padding: 20px;
+            background-color: #ededed;
+            border: none;
+            border-radius: 5px;
+        }
+        .form_group{
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        label {
+            width: 100px;
+            font-weight: bold;
+            margin-right: 100px;
+        }
+        input{
+            flex: 1;
+            border: none;
+            border-bottom: 2px dotted #333;
+            background-color: #ededed;
+            padding: 5px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: bold;
+            color: #506e3b;
+            margin: 0 auto;
+            background-color: #c5e0b4;
+        }
+    </style>
+</head>
+<body onload="onLoad();">
+    <h1 style="display: none;">form data</h1>
+
+    <form action="#" method="post">
+        <div class="form_group">
+            <b><label for="id">아이디</label></b>
+            <input type="text" name="id" id="id" required><span></span> <br>
+        </div>
+        
+        <div class="form_group">
+            <b><label for="pwd1">패스워드</label></b>
+            <input type="password" name="pwd1" id="pwd1" placeholder="비밀번호를 입력하시오" name="" value="" required><span></span> <br>
+        </div>
+        <div class="form_group">
+            <b><label for="pwd2">패스워드 확인</label></b>
+            <input type="password" name="pwd2" id="pwd2" placeholder="비밀번호를 입력하시오" name="" value="" required><span></span> <br>
+        </div>
+        <div class="form_group">
+            <b><label for="email">이메일</label></b>
+            <input type="text" name="email" id="email" placeholder="example@example.com" name="" value="" required><span></span> <br>
+        </div>
+        <div class="form_group">
+            <b><label for="addr">주소</label></b>
+            <input type="text" name="addr" id="addr" name="" value="" required><span></span> <br>
+        </div>
+        <br>
+        <div>
+            <button type="submit" onclick="joinMember();">가입</button>
+        </div>    
+    </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form{
+            width: 400px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        
+        label {
+            display: inline-block;
+            width: 70px;
+            padding: 10px;
+            vertical-align: top;
+        }
+        #write_button{
+            display: block;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        #file_upload_button {
+            padding: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: none;">form data</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>공지사항 작성하기</legend>
+            <label for="title"><b>제목</b></label>
+            <input type="text" name="title" id="title" placeholder="제목을 입력하시오."><br>
+            <b><label for="content">내용</label></b>
+            <textarea name="content" id="content" cols="30" rows="10" placeholder="내용을 입력하시오."></textarea>
+        <br>
+        <label for="uploadfile"><b>첨부파일</b></label> 
+        <button type="button" id="file_upload_button">파일 선택</button> 선택된 파일 없음<br>
+        <button type="submit" id="write_button">작성하기</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>

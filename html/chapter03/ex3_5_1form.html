@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM DATA</title>
+    <style>
+        form{
+            width: 400px;
+            border: 1px solid black;
+            margin: 0 auto;
+            padding: 10px;
+            overflow: hidden;
+            background-color: beige;
+        }
+        label {
+            display: inline-block;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="display: none;">form data</h1>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>개인정보입력란</legend>
+            <b><label for="age">나이</label></b> <br>
+            <input type="text" name="age" id="age" placeholder="나이"> <br>
+    
+            <b><label for="email">이메일</label></b> <br>
+            <input type="text" name="email" id="email" placeholder="HTML"> <br>
+        </fieldset>
+        <fieldset>
+            <legend>로그인기능</legend>
+            <b><label for="id">아이디</label></b> <br>
+            <input type="text" name="id" id="id" placeholder="아이디"> <br>
+            
+            <b><label for="password">패스워드</label></b> <br>
+            <input type="password" name="password" id="password" placeholder="비밀번호"> <br>
+        </fieldset>
+        <fieldset>
+            <legend>자기소개란</legend>
+            <b><label for="intro">자기소개서</label></b> <br>
+            <textarea name="intro" id="intro" cols="30" rows="10">
+        </fieldset>
+        
+        </textarea>
+        
+        <br>
+        <fieldset>
+            <legend>서버로 전송&취소</legend>
+            <button type="submit">서버전송</button>
+            <button type="reset">전송취소</button>
+        </fieldset>
+        
+    </form>
+</body>
+</html>
